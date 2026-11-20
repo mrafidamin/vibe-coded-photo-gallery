@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My photo gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="gallery-header">
+    <h1 class="gallery-title">My photo gallery</h1>
+    <p class="gallery-subtitle">Nature Collection &mdash; Landscape, Water, Atmosphere &amp; Macro</p>
+  </header>
+
+  <main class="gallery-main">
+    <section
+      id="gallery-grid"
+      class="gallery-grid"
+      aria-label="Nature photo gallery"
+    ></section>
+  </main>
+
+  <!-- Full-Screen Lightbox -->
+  <div
+    id="lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-label="Full-screen photo viewer"
+  >
+    <div class="lightbox-topbar">
+      <span id="lightbox-counter" class="lightbox-counter" aria-live="polite">1 / 20</span>
+      <button
+        id="lightbox-close"
+        class="lightbox-btn lightbox-close"
+        type="button"
+        aria-label="Close"
+        title="Close (Esc)"
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <button
+      id="lightbox-prev"
+      class="lightbox-btn lightbox-nav lightbox-prev"
+      type="button"
+      aria-label="Previous photo"
+      title="Previous photo (Left Arrow)"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <figure id="lightbox-stage" class="lightbox-stage">
+      <img id="lightbox-image" class="lightbox-image" src="" alt="">
+      <figcaption class="lightbox-caption">
+        <span id="lightbox-title" class="lightbox-title"></span>
+        <span id="lightbox-category" class="lightbox-category"></span>
+      </figcaption>
+    </figure>
+
+    <button
+      id="lightbox-next"
+      class="lightbox-btn lightbox-nav lightbox-next"
+      type="button"
+      aria-label="Next photo"
+      title="Next photo (Right Arrow)"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
